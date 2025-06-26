@@ -1,9 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&display=swap');
 
 .lmj-banner {
-    color: black;
-    text-align: right;
-    padding: 32px;
-    border-bottom: solid 3px black;
-    font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #222;
+  padding: 40px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 4px 24px rgba(49,181,114,0.10);
+  animation: fadeInBanner 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeInBanner {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lmj-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(49,181,114,0.12);
+  margin-bottom: 12px;
+  transition: transform 0.3s;
+}
+.lmj-logo:hover {
+  transform: scale(1.08) rotate(-6deg);
+}
+
+.lmj-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInBanner 1.6s 0.2s backwards;
+}
+
+.lmj-title-green {
+  color: #31b572;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.1em;
+  margin-left: 6px;
+}
+
+.lmj-title-emoji {
+  font-size: 1.5em;
+  margin-left: 8px;
+  animation: leafWiggle 2.2s 1.2s infinite alternate;
+}
+@keyframes leafWiggle {
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+
+.lmj-baseline {
+  font-size: 1.2rem;
+  color: #31b572;
+  margin-top: 8px;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  animation: fadeInBanner 1.8s 0.4s backwards;
 }

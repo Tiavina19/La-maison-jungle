@@ -12,7 +12,11 @@ function App() {
     <div>
       <Banner>
         <img src={logo} alt="La maison jungle" className="lmj-logo" />
-        <h1 className="lmj-title">La maison jungle</h1>
+        <h1 className="lmj-title">
+          LA MAISON <span className="lmj-title-green">JUNGLE</span>{" "}
+          <span className="lmj-title-emoji">🌿</span>
+        </h1>
+        <p className="lmj-baseline">La boutique des amoureux des plantes</p>
       </Banner>
       <div className="lmj-layout-inner">
         <Cart cart={cart} updateCart={updateCart} />
@@ -22,5 +26,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

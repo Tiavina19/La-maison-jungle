@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 .lmj-shopping-list {
 	width: 100%;
 }
@@ -8,4 +9,42 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+.lmj-plant-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+
+.lmj-shopping-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+
+}
+
+.lmj-shopping-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-left:8vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.lmj-bou {
+  color: #222;
+}
+
+.lmj-tique {
+  color: #31b572;
+  margin-left: 2px;
+  font-size: 3.5rem;
 }
