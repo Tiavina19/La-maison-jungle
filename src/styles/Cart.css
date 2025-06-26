@@ -1,36 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 .lmj-cart {
-	color: white;
-	background-color: #31b572;
-	padding: 32px;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 4px 24px rgba(49,181,114,0.10);
+	padding: 32px 24px;
+	min-width: 320px;
+	max-width: 400px;
+	margin: 24px 0;
+	font-family: 'Montserrat', Arial, sans-serif;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	width: 200px;
-}
-
-.lmj-cart-add-button {
-	margin-left: 32px;
-	cursor: pointer;
-}
-
-.lmj-cart-toggle-button {
-	background: none;
-	outline: none;
+	align-items: stretch;
+  }
+  
+  .lmj-cart h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #31b572;
+	margin-bottom: 16px;
+	text-align: center;
+	letter-spacing: 1px;
+  }
+  
+  .lmj-cart ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 16px 0;
+  }
+  
+  .lmj-cart ul > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 0;
+	border-bottom: 1px solid #eafff3;
+	font-size: 1.1rem;
+  }
+  
+  .lmj-cart h3 {
+	color: #228a4d;
+	font-size: 1.3rem;
+	font-weight: 700;
+	text-align: right;
+	margin: 16px 0 8px 0;
+  }
+  
+  .lmj-cart button,
+  .lmj-cart-toggle-button {
+	padding: 8px 16px;
+	border-radius: 8px;
 	border: none;
+	background: #31b572;
+	color: white;
 	font-weight: 600;
 	cursor: pointer;
-	align-self: self-start;
-	padding: 0;
-	color: white;
-}
-
-.lmj-cart-closed {
-	padding: 32px;
-	width: 200px;
-}
-
-.lmj-cart-closed > button {
-	color: black;
-}
+	transition: background 0.2s;
+	margin-top: 12px;
+  }
+  
+  .lmj-cart button:hover,
+  .lmj-cart-toggle-button:hover {
+	background: #228a4d;
+  }

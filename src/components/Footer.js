@@ -18,16 +18,38 @@ function Footer() {
 
   return (
     <footer className="lmj-footer">
-      <div className="lmj-footer-elem">
-        Pour les passionné·e·s de plantes 🌿🌱🌵
+      <div className="lmj-footer-content">
+        <span>
+          © {new Date().getFullYear()} La Maison Jungle&nbsp;
+          <span role="img" aria-label="plante">
+            🌱
+          </span>
+        </span>
+        <a
+          href="https://github.com/Tiavina19"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="lmj-footer-link"
+        >
+          Mon GitHub
+        </a>
+        <div className="lmj-footer-newsletter">
+          <label
+            htmlFor="newsletter-email"
+            className="lmj-footer-newsletter-label"
+          >
+            📧 Newsletter :
+          </label>
+          <input
+            id="newsletter-email"
+            type="email"
+            placeholder="Votre email pour la newsletter"
+            value={inputValue}
+            onChange={handleInput}
+            onBlur={handleBlur}
+          />
+        </div>
       </div>
-      <div className="lmj-footer-elem">Laissez-nous votre mail :</div>
-      <input
-        placeholder="Entrez votre mail"
-        onChange={handleInput}
-        value={inputValue}
-        onBlur={handleBlur}
-      />
     </footer>
   );
 }
