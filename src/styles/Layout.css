@@ -1,4 +1,18 @@
 .lmj-layout-inner {
 	display: flex;
 	flex-direction: row;
+	padding: 32px;
+}
+
+@media (max-width: 768px) {
+	.lmj-layout-inner {
+		padding: 16px;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 480px) {
+	.lmj-layout-inner {
+		padding: 8px;
+	}
 }

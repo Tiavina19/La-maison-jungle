@@ -61,3 +61,17 @@
   border: 1.5px solid #228a4d;
   box-shadow: 0 2px 12px rgba(49,181,114,0.12);
 }
+
+@media (max-width: 480px) {
+  .lmj-footer-newsletter {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lmj-footer-newsletter input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+  }
+  .lmj-footer-content {
+    align-items: center;
+  }
+}

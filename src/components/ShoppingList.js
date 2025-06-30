@@ -44,7 +44,7 @@ function ShoppingList({ cart, updateCart }) {
           .filter(
             (plant) => !activeCategory || plant.category === activeCategory
           )
-          .map((plant) => (
+          .map((plant, index) => (
             <PlantItem
               key={plant.id}
               id={plant.id}
@@ -54,6 +54,7 @@ function ShoppingList({ cart, updateCart }) {
               light={plant.light}
               price={plant.price}
               addToCart={() => addToCart(plant.name, plant.price)}
+              style={{ "--item-index": index }}
             />
           ))}
       </ul>

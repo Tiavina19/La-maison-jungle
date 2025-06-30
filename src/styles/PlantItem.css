@@ -1,64 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-.lmj-plant-item-cover {
-	height: 250px;
-	width: 250px;
-	border-radius: 20px;
-	object-fit: cover;
-	box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-	
-}
 
 .lmj-plant-item {
 	margin: 10px;
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
 	flex-direction: column;
-	text-transform: capitalize;
 	position: relative;
-	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+	overflow: hidden;
+	transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s;
 }
 
-.lmj-plant-item-footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.lmj-plant-item:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 32px rgba(49,181,114,0.15);
+}
+
+.lmj-plant-item-image-wrapper {
+	position: relative;
+	height: 250px;
+	width: 250px;
+	overflow: hidden;
+}
+
+.lmj-plant-item-image-wrapper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+
+.lmj-plant-item:hover .lmj-plant-item-image-wrapper::after {
+	opacity: 1;
+}
+
+.lmj-plant-item-cover {
+	height: 100%;
 	width: 100%;
-	margin-top: 10px;
+	object-fit: cover;
+	transition: transform 0.4s;
 }
 
-.lmj-plant-item-footer > div {
-	display: flex;
-	align-items: center;
-	gap: 10px;
+.lmj-plant-item:hover .lmj-plant-item-cover {
+	transform: scale(1.1);
 }
 
 .lmj-plant-item-price {
 	position: absolute;
-	border-radius: 20px 20px 20px 0;
-	background-color: red;
+	top: 10px;
+	right: 10px;
+	background-color: #e74c3c;
 	color: white;
-	padding: 15px;
-	right: 0;
-	top: 0;
-	font-weight: 500;
+	padding: 5px 12px;
+	border-radius: 20px;
+	font-weight: 600;
 	font-family: 'Poppins', sans-serif;
-	font-size: 1.1em;
-  }
+	z-index: 2;
+	font-size: 0.9em;
+}
 
-.lmj-plant-btn {
-	padding: 8px 16px;
+.lmj-plant-item-content {
+	padding: 16px;
+	text-align: left;
+}
+
+.lmj-plant-item-name {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin: 0 0 8px 0;
+	text-transform: capitalize;
+}
+
+.lmj-plant-item-care {
+	display: flex;
+	gap: 10px;
+}
+
+.lmj-plant-btn-add {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 20px);
+	opacity: 0;
+	padding: 10px 20px;
 	border-radius: 8px;
 	border: none;
 	background: #31b572;
 	color: white;
 	font-weight: 600;
 	cursor: pointer;
-	transition: background 0.2s;
+	transition: opacity 0.4s, transform 0.4s;
+	z-index: 2;
 	font-family: 'Poppins', sans-serif;
 }
 
-.lmj-plant-btn:hover {
-	background: #228a4d;
+.lmj-plant-item:hover .lmj-plant-btn-add {
+	opacity: 1;
+	transform: translate(-50%, 0);
 }

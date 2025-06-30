@@ -61,3 +61,11 @@
   .lmj-cart-toggle-button:hover {
 	background: #228a4d;
   }
+
+@media (max-width: 768px) {
+  .lmj-cart {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 24px 0;
+  }
+}

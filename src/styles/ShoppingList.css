@@ -48,3 +48,27 @@
   margin-left: 2px;
   font-size: 3.5rem;
 }
+
+@media (max-width: 768px) {
+  .lmj-plant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lmj-shopping-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .lmj-plant-list {
+    grid-template-columns: 1fr;
+  }
+  .lmj-shopping-header {
+    padding: 0 1rem;
+  }
+  .lmj-shopping-title {
+    font-size: 2rem;
+  }
+}
