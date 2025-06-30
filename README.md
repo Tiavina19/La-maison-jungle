@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# La Maison Jungle 🌿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenue sur La Maison Jungle, un projet de boutique en ligne pour les amoureux des plantes, développé avec React. Ce projet a été conçu pour mettre en pratique les concepts fondamentaux et avancés de React, de la gestion de l'état à la création d'une interface utilisateur moderne et responsive.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Fonctionnalités
 
-### `npm start`
+- **Catalogue de plantes** : Affichage des plantes dans une grille élégante avec des effets de survol.
+- **Filtrage par catégorie** : Un menu déroulant permet de filtrer les plantes par catégorie (classique, extérieur, plante grasse).
+- **Panier dynamique** :
+  - Ajout d'articles au panier.
+  - Suppression individuelle d'un article.
+  - Vidage complet du panier.
+  - Calcul du total en temps réel.
+- **Mise à jour du titre de la page** : Le titre de l'onglet du navigateur (`document.title`) se met à jour dynamiquement avec le montant total du panier grâce à `useEffect`.
+- **Interface utilisateur moderne** :
+  - Animations d'apparition sur les éléments.
+  - Effets de survol (hover) sur les cartes des plantes et les boutons.
+  - Design épuré et cohérent.
+- **Entièrement Responsive** : L'interface s'adapte parfaitement aux différentes tailles d'écran (mobile, tablette et ordinateur de bureau) grâce aux Media Queries.
+- **Newsletter** : Un champ de saisie dans le footer pour s'inscrire à la newsletter, avec une validation basique de l'email.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies utilisées
 
-### `npm test`
+- **React.js** (v18+)
+  - Hooks : `useState`, `useEffect`
+  - Props, Children, Gestion des événements
+- **JavaScript (ES6+)**
+- **CSS3**
+  - Flexbox & Grid pour la mise en page
+  - Animations (`@keyframes`) et Transitions
+  - Media Queries pour le design responsive
+- **HTML5** sémantique
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Démarrage rapide
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pour lancer le projet en local, suivez ces étapes :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  **Clonez le dépôt**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/Tiavina19/la-maison-jungle.git
+    cd la-maison-jungle
+    ```
 
-### `npm run eject`
+2.  **Installez les dépendances**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  **Lancez le serveur de développement**
+    ```bash
+    npm start
+    ```
+    L'application sera alors accessible à l'adresse `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Scripts disponibles
 
-## Learn More
+Dans ce projet, vous pouvez exécuter :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm start`: Lance l'application en mode développement.
+- `npm test`: Lance les tests en mode interactif.
+- `npm run build`: Construit l'application pour la production dans le dossier `build`.
+- `npm run eject`: Ejecte la configuration de Create React App (opération irréversible).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
