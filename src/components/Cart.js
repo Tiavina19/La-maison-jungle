@@ -12,6 +12,8 @@ function Cart({ cart, updateCart }) {
     document.title = `LMJ - Panier : ${total}€`;
   }, [total]);
 
+  // Supprimer cette useEffect qui cause le problème
+
   function removeFromCart(name) {
     const newCart = cart.filter((plant) => plant.name !== name);
     updateCart(newCart);
