@@ -4,18 +4,11 @@
 }
 
 .lmj-plant-list {
-	list-style-type: none;
-	padding: 32px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.lmj-plant-list {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	gap: 24px;
 	list-style: none;
-	padding: 0;
+	padding: 32px;
 	margin: 0;
   }
 
@@ -37,6 +30,7 @@
   align-items: center;
   margin-left:8vh;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 .lmj-bou {
@@ -52,6 +46,8 @@
 @media (max-width: 768px) {
   .lmj-plant-list {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
   }
 
   .lmj-shopping-header {
@@ -59,16 +55,32 @@
     gap: 1rem;
     align-items: center;
   }
+  
+  .lmj-shopping-title {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+  
+  .lmj-tique {
+    font-size: 2.8rem;
+  }
 }
 
 @media (max-width: 480px) {
   .lmj-plant-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
   }
   .lmj-shopping-header {
     padding: 0 1rem;
   }
   .lmj-shopping-title {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+  
+  .lmj-tique {
     font-size: 2rem;
   }
 }

@@ -11,6 +11,7 @@
   .lmj-categories-label {
     font-weight: 600;
     margin-right: 8px;
+    color: #222;
   }
   
   .lmj-categories-select {
@@ -41,12 +42,26 @@
 
 @media (max-width: 480px) {
   .lmj-categories-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 12px 16px;
   }
+  
+  .lmj-categories-label {
+    display: none;
+  }
+  
   .lmj-categories-select {
-    width: 100%;
-    max-width: 300px;
+    width: auto;
+    min-width: 150px;
     text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .lmj-categories-reset {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .lmj-plant-item {
-	margin: 10px;
+	margin: 0;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -10,6 +10,7 @@
 	box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 	overflow: hidden;
 	transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s;
+	width: 100%;
 }
 
 .lmj-plant-item:hover {
@@ -20,7 +21,7 @@
 .lmj-plant-item-image-wrapper {
 	position: relative;
 	height: 250px;
-	width: 250px;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -104,4 +105,46 @@
 .lmj-plant-item:hover .lmj-plant-btn-add {
 	opacity: 1;
 	transform: translate(-50%, 0);
+}
+
+.lmj-plant-btn-add:hover {
+	background: #228a4d;
+}
+
+@media (max-width: 768px) {
+  .lmj-plant-item-image-wrapper {
+    height: 200px;
+  }
+  
+  .lmj-plant-item-name {
+    font-size: 1rem;
+  }
+  
+  .lmj-plant-item-content {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lmj-plant-item-image-wrapper {
+    height: 150px;
+  }
+  
+  .lmj-plant-item-name {
+    font-size: 0.9rem;
+  }
+  
+  .lmj-plant-item-content {
+    padding: 8px;
+  }
+  
+  .lmj-plant-item-price {
+    font-size: 0.8em;
+    padding: 3px 8px;
+  }
+  
+  .lmj-plant-btn-add {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
 }

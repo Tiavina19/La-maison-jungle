@@ -34,6 +34,37 @@
 	padding: 8px 0;
 	border-bottom: 1px solid #eafff3;
 	font-size: 1.1rem;
+	word-break: break-word;
+  }
+  
+  .lmj-cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eafff3;
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+  
+  .lmj-cart-remove {
+    background: #e74c3c !important;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  
+  .lmj-cart-remove:hover {
+    background: #c0392b !important;
   }
   
   .lmj-cart h3 {
@@ -42,6 +73,10 @@
 	font-weight: 700;
 	text-align: right;
 	margin: 16px 0 8px 0;
+  }
+  
+  .lmj-cart > div {
+    text-align: center;
   }
   
   .lmj-cart button,
@@ -55,11 +90,68 @@
 	cursor: pointer;
 	transition: background 0.2s;
 	margin-top: 12px;
+	font-size: 0.9rem;
+	text-align: center;
   }
   
-  .lmj-cart button:hover,
-  .lmj-cart-toggle-button:hover {
-	background: #228a4d;
+  .lmj-cart-closed .lmj-cart-toggle-button {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #31b572;
+    border: 2px solid #31b572;
+  }
+  
+
+  
+  .lmj-cart-closed .lmj-cart-toggle-button {
+    position: relative;
+  }
+  
+  .lmj-cart-closed .lmj-cart-toggle-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(49, 181, 114, 0.4);
+  }
+  
+  .lmj-cart-closed .lmj-cart-toggle-button:hover::after {
+    content: "Panier";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(5px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+  }
+  
+  .lmj-cart-closed {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .lmj-cart-animated {
+    display: flex;
+    justify-content: center;
   }
 
 @media (max-width: 768px) {
@@ -67,5 +159,78 @@
     width: 100%;
     max-width: none;
     margin: 0 0 24px 0;
+    padding: 24px 16px;
+  }
+  
+  .lmj-cart h2 {
+    font-size: 1.5rem;
+  }
+  
+  .lmj-cart h3 {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+  
+  .lmj-cart button,
+  .lmj-cart-toggle-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .lmj-cart ul > div {
+    font-size: 0.9rem;
+  }
+  
+  .lmj-cart-item {
+    font-size: 0.9rem;
+  }
+  
+  .lmj-cart-remove {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lmj-cart {
+    padding: 16px 12px;
+  }
+  
+  .lmj-cart h2 {
+    font-size: 1.2rem;
+  }
+  
+  .lmj-cart h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .lmj-cart button,
+  .lmj-cart-toggle-button {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    width: auto;
+    min-width: 60px;
+  }
+  
+  .lmj-cart ul > div {
+    font-size: 0.8rem;
+    padding: 6px 0;
+  }
+  
+  .lmj-cart-item {
+    font-size: 0.8rem;
+    padding: 6px 0;
+  }
+  
+  .lmj-cart-remove {
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+  }
+  
+  .lmj-cart > div {
+    font-size: 0.9rem;
   }
 }

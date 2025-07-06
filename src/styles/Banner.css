@@ -40,6 +40,9 @@
   align-items: center;
   gap: 8px;
   animation: fadeInBanner 1.6s 0.2s backwards;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 .lmj-title-green {
@@ -71,7 +74,8 @@
 
 @media (max-width: 768px) {
   .lmj-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    gap: 4px;
   }
   .lmj-baseline {
     font-size: 1rem;
@@ -84,8 +88,12 @@
     height: 60px;
   }
   .lmj-title {
-    font-size: 1.8rem;
-    gap: 4px;
+    font-size: 1.4rem;
+    gap: 2px;
+    letter-spacing: 1px;
+  }
+  .lmj-title-green {
+    font-size: 1em;
   }
   .lmj-baseline {
     display: none;

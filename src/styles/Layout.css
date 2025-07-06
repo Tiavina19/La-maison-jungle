@@ -11,6 +11,12 @@
 	}
 }
 
+@media (max-width: 1024px) and (min-width: 769px) {
+	.lmj-layout-inner {
+		padding: 24px;
+	}
+}
+
 @media (max-width: 480px) {
 	.lmj-layout-inner {
 		padding: 8px;
